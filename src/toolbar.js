@@ -13,8 +13,8 @@ class Toolbar extends Component {
 
     this.switchToEditor = this.switchToEditor.bind(this);
     this.switchToSplit = this.switchToSplit.bind(this);
-    this.switchToView = this.switchToView.bind(this);
     this.switchToTask = this.switchToTask.bind(this);
+    this.switchToView = this.switchToView.bind(this);
   }
 
   switchToEditor(e) {
@@ -25,12 +25,12 @@ class Toolbar extends Component {
     this.props.onClick("split")
   }
 
-  switchToView(e) {
-    this.props.onClick("view")
-  }
-
   switchToTask(e) {
     this.props.onClick("task")
+  }
+
+  switchToView(e) {
+    this.props.onClick("view")
   }
 
   render() {
@@ -38,8 +38,8 @@ class Toolbar extends Component {
       <div className="toolbar">
         <MdFormatAlignLeft width="22" height="22" onClick={this.switchToEditor}/>
         <MdChromeReaderMode width="22" height="22" onClick={this.switchToSplit}/>
-        <TiEye width="22" height="22" onClick={this.switchToView}/>
         <Mdtimer width="22" height="22" onClick={this.switchToTask}/>
+        <TiEye width="22" height="22" onClick={this.switchToView}/>
       </div>
     );
   }
