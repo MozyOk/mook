@@ -76,6 +76,8 @@ class App extends Component {
       case "view":
         this.setState({ splitPaneSize: "0%"})
         break;
+      case "task":
+        this.setState({ splitPaneSize: "30%"})
       default:
         break;
     }
